@@ -1,57 +1,42 @@
-<!-- TABLE OF CONTENTS -->
-<details open="open">
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ol>
-</details>
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
-![다운로드](https://user-images.githubusercontent.com/67310666/120573888-48f3c200-c459-11eb-8983-9ddf37b5dcc8.png)
+## 공덕역 알고리즘 스터디
 
-* 사용하지 않는 기프티콘을 판매하고 필요한 기프티콘을 저렴하게 구매하는 기프티콘 중고 거래 플랫폼
-* 불필요한 개인정보 노출없이 기쁘티콘에서 바로 결제하는 편리한 구매 과정과 기쁘티콘에서 검수 후 소비자에게 제공하는 형태로 허위 매물 등 판매 사기를 예방
-
-### Built With
-* 서버기술:Apache2, Tomcat8, AWS EC2, AWS RDS, MySQL, Spring Framework
-* 회면기술:HTML5, CSS3, JavaScript, Bootstrap
-* 개발도구:Intellij, MySQL Workbench
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feat/feature name/210603hy`)
-3. Commit your Changes (`git commit -m 'Add feature name'`)
-4. Push to the Branch (`git push origin feat/feature name/210603hy`)
-5. Open a Pull Request
+* 기본 알고리즘부터 차근차근 훝고가는 스터디 입니다.
 
 <!-- LICENSE -->
-## License
+## 일정
 
-Distributed under the MIT License. See `LICENSE` for more information.
+* 수요일 - 19:00 ~ 21:00(22:00)
+* 일요일 - 10:00 ~ 12:00(13:00)
+
+## 진행방식
+
+* 매주 - 지정된 유형에 대해 각자 공부하고 과제로 주어진 문제를 풀어옵니다.
+* 과제 - 해당 유형 문제에 대해 2-3 문제씩 풀어옵니다.
+
+* 수요일 - 유형 리뷰, 개념정리를 진행 / 과제문제 리뷰
+* 일요일 - 유형 추가문제 풀기 / 문제 풀이
+
 
 <!-- CONTACT -->
-## Contact
+## 주차별 진도
 
-* 김병은 - https://github.com/ByoungeunKim
-* 김충현 - https://github.com/chunghyeon-kim
-* 김희영 - https://github.com/heeyoung2da
-* 이성민 - https://github.com/planner26
-* 이혜지 - https://github.com/1eehyeji
-
-
+* 1주차 - 기본 정렬 알고리즘
+* 2주차 - heap
+* 3주차 - 완전탐색/이분탐색
+* 4주차 - Greedy
+* 5주차 - DFS/BFS
+* 6주차 - Dynamic Programming
+* 7주차 - 그래프알고리즘
+* 8주차 - MST
+* 9주차 - 다익스트라
+* 10주차 - 미정
 
 <!-- Presentation -->
-## Presentation
+## RULE
 
-* Youtube - https://www.youtube.com/watch?v=wte0n7cOc3c
+* 스터디룸 비용은 카카오 모임통장으로 관리예정입니다.
+* 한달 2회 이상 불참시, 스터디에서 강퇴됩니다. 불참및 강퇴시 모임비용은 돌려드리지 않습니다.
+* 과제 미이행시 벌금! 문제당 2000원 (불참하더라도 과제는 진행해주세요!)
+
