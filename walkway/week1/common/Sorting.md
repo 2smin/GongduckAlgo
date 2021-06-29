@@ -13,18 +13,17 @@
   - 최악: O(n^2)
   - 최선: O(nlog₂n)
   - 평균: O(nlogn)
-  - 공간: O(longn)
 ````
-Quicksort(int A[], int low, int high) {
+quicksort(int A[], int low, int high) {
 	int pivot;
 	if (high > low) {
-		pivot = Partition(A, low, high);
-		Quicksort(A, low, pivot-1);
-		Quicksort(A, pivot +1, high);
+		pivot = partition(A, low, high);
+		quicksort(A, low, pivot-1);
+		quicksort(A, pivot +1, high);
 	}
 }
 
-int Partition(int A, int low, int high) {
+int partition(int A, int low, int high) {
 	int left, right, pivot_item = A[low];
 	left = low;
 	right = high;
@@ -44,6 +43,29 @@ int Partition(int A, int low, int high) {
 }
 ````
 
+## 삽입 정렬
+- 배열의 한 원소 key를 가지고 있고, key를 알맞는 순서에 삽입
+- key보다 큰 값은 하나씩 밀어내고, key보다 작은 값은 뒤에 삽입
+- 입력 배열이 선정렬(완전하지 않아도)되어있는 경우 효율적인 정렬
+- 복잡도
+  - 최악: O(n^2)
+  - 최선: O(n^2)
+  - 평균: O(n^2)
+ ````
+ void insertionSort(int A[], int size) {
+ 	int i, j, key;
+ 	for (int = 1; i < size; i++) {
+ 		key = A[i];
+ 		j = i - 1;
+ 		while(A[j] > key && j >= 0) {
+ 			A[j + 1] = A[j];
+ 				j--;
+ 		}
+ 		A[j + 1] = key;
+ 	}
+ }
+ ````
+
 ## 합병 정렬
 - 병합: 두 개의 정렬된 파일을 합쳐서 하나의 큰 정렬된 파일을 만드는 과정
 - 선택: 파일을 두 부분 k개 작은 항목들, n-k개 큰 항목으로 나누는 과정
@@ -54,7 +76,6 @@ int Partition(int A, int low, int high) {
   - 최악: O(nlog₂n)
   - 최선: O(nlog₂n)
   - 평균: O(nlog₂n)
-  - 공간: O(1)
 
 ### 버블 정렬
 - 첫 번째 항목부터 마지막까지 입력 배열을 반복
@@ -65,9 +86,8 @@ int Partition(int A, int low, int high) {
   - 최악: O(n^2)
   - 최선: O(n)
   - 평균: O(n^2)
-  - 공간: O(n)
 ````
-void BubbleSort(int A [], int n) {
+void bubbleSort(int A [], int n) {
 	for(int pass = n - 1; pass >= 0; pass--) {
 		for (int i = 0; i < pass - 1; i++) {
 			if (A[i] > A[i+1]) {
