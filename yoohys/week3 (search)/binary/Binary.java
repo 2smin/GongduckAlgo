@@ -1,34 +1,22 @@
-
-
 import java.util.Arrays;
-import java.util.Comparator;
 
-public class PG42746 {
-
-  public static void main(String[] args) {
-
-    int a = BSearch(new int[]{2, 3, 4, 5, 7, 8},7);
-
-    System.out.println(a);
-  }
-
+class Binary {
 
   // 반복문을 이용
-  static int BSearch(int arr[], int target) {
+  int BSearch(int arr[], int target) {
     int low = 0;
     int high = arr.length - 1;
     int mid;
 
-    while (low <= high) {
+    while(low <= high) {
       mid = (low + high) / 2;
 
-      if (arr[mid] == target) {
+      if (arr[mid] == target)
         return mid;
-      } else if (arr[mid] > target) {
+      else if (arr[mid] > target)
         high = mid - 1;
-      } else {
+      else
         low = mid + 1;
-      }
     }
     return -1;
   }
@@ -48,7 +36,4 @@ public class PG42746 {
       return BSearchRecursive(arr, target, mid + 1, high);
     }
   }
-
 }
-
-
