@@ -1,53 +1,52 @@
-
+package programmers;
 
 import java.util.Arrays;
 import java.util.Comparator;
 
 public class PG42746 {
 
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    int a = BSearch(new int[]{2, 3, 4, 5, 7, 8},7);
+        Solution solution = new Solution();
 
-    System.out.println(a);
-  }
+        String answer = solution.solution(new int[]{5, 546});
 
-
-  // 반복문을 이용
-  static int BSearch(int arr[], int target) {
-    int low = 0;
-    int high = arr.length - 1;
-    int mid;
-
-    while (low <= high) {
-      mid = (low + high) / 2;
-
-      if (arr[mid] == target) {
-        return mid;
-      } else if (arr[mid] > target) {
-        high = mid - 1;
-      } else {
-        low = mid + 1;
-      }
+        System.out.println(answer);
     }
-    return -1;
-  }
+}
 
-  // 재귀를 이용
-  int BSearchRecursive(int arr[], int target, int low, int high) {
-    if (low > high) {
-      return -1;
-    }
+class Solution{
 
-    int mid = (low + high) / 2;
-    if (arr[mid] == target) {
-      return mid;
-    } else if (arr[mid] > target) {
-      return BSearchRecursive(arr, target, low, mid - 1);
-    } else {
-      return BSearchRecursive(arr, target, mid + 1, high);
+    public String solution(int[] numbers) {
+
+        String[] arr = new String[numbers.length];
+
+        int i = 0;
+        for(int num : numbers){
+            arr[i] = num+"";
+            i++;
+        }
+        Arrays.sort(arr, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return (o2+o1).compareTo(o1+o2);
+            }
+        });
+
+        String answer = "";
+
+        for(int j=0; j<arr.length; j++){
+            answer += arr[j];
+        }
+
+        if(answer.charAt(0) == '0'){
+            answer = "0";
+        }
+        return answer;
+
+//          얘는 왜 runtimeError 날까요??
+//        return Integer.valueOf(answer) == 0 ? "0" : answer;
     }
-  }
 
 }
 
